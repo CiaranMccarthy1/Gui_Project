@@ -22,12 +22,6 @@
                         <input type="hidden" name="food_id" value="{{ item.id }}">
                         <button type="submit" class="btn btn-primary">Add to Basket</button>
                     </form>
-                    {% else %}
-                    <p class="text-muted">Please login to order.</p>
-                    <form action="/login" method="post" class="d-flex mt-2">
-                        <input type="text" name="username" placeholder="Username" class="form-control me-2" required>
-                        <button class="btn btn-success">Login</button>
-                    </form>
                     {% endif %}
                 </div>
             </div>

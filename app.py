@@ -18,12 +18,14 @@ os.makedirs(BASKETS_DIR, exist_ok=True)
 
 @app.route('/')
 def index():
+    if "username" not in session:
+        return redirect("/login")
     return render_template("index.html", menu=FOOD_MENU, username=session.get("username"))
 
 @app.route("/order", methods=['POST'])
 def order():
     if 'username' not in session:
-        return redirect('/')
+        return redirect('/login')
     food_id = int(request.form["food_id"])
     item = next((f for f in FOOD_MENU if f['id'] == food_id), None)
     if item:
@@ -45,7 +47,7 @@ def basket():
     total = sum(item["price"] for item in items)
     return render_template('basket.html', basket=items, total=total, username=session["username"])
 
-@app.route('/checkout')
+@app.route("/checkout")
 def checkout():
     if "username" in session:
         basketPath = os.path.join(BASKETS_DIR, f"{session["username"]}.txt")
@@ -53,15 +55,17 @@ def checkout():
             os.remove(basketPath)
     return render_template('checkout.html', username=session.get("username"))
 
-@app.route('/login', methods=['POST'])
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    session["username"] = request.form["username"]
-    return redirect('/')
+    if request.method == "POST":
+        session["username"] = request.form["username"]
+        return redirect("/")    
+    return render_template("login.html")
 
 @app.route("/logout")
 def logout():
     session.pop("username", None)
-    return redirect('/')
+    return redirect("/login")
 
 if __name__ == "__main__":
-    app.run(debug="TRUE")
+    app.run()
