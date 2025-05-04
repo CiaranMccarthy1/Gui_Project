@@ -7,6 +7,9 @@
 </tr>
 </table>
 
+## How to run
+To run the program type python app.py in terminal 
+
 ## Site
 
 ## Built with 
