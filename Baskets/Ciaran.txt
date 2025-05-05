@@ -1,0 +1,2 @@
+{"id": 2, "name": "Pizza \ud83c\udf55", "price": 8.99}
+{"id": 5, "name": "Hot-dog \ud83c\udf2d", "price": 5.99}

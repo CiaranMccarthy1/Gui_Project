@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const price = parseFloat(input.dataset.price);
         const quantity = parseInt(input.value) || 1;
         const itemTotal = price * quantity;
-        itemTotals[index].textContent = `$${itemTotal.toFixed(2)}`;
+        itemTotals[index].textContent = `€${itemTotal.toFixed(2)}`;
         total += itemTotal;
       });
   
-      totalAmount.textContent = `$${total.toFixed(2)}`;
+      totalAmount.textContent = `€${total.toFixed(2)}`;
     }
   
     quantityInputs.forEach((input) => {
