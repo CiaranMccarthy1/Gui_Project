@@ -11,7 +11,21 @@
   <div class="container mt-4">
     <h2>Checkout</h2>
     <p>Thank you for checking out.</p>
-    <a href="/" class="btn btn-primary">Back to Menu</a>
+    <p>Your total is <span id="basket-total">€0.00</span></p>
+
+    <!-- Address form -->
+    <form id="checkout-form">
+      <div class="mb-3">
+        <label for="address" class="form-label">Enter delivery address:</label>
+        <input type="text" id="address" class="form-control" placeholder="123 Shop Street" required>
+      </div>
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-success">Confirm and Checkout</button>
+        <a href="/" class="btn btn-primary">Back to Menu</a>
+      </div>
+    </form>
   </div>
+
+  <script src="/static/JavaScript/checkout.js" defer></script>
 </body>
 </html>
