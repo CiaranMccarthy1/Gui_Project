@@ -1,0 +1,280 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+body{
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: white;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#header{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(images/plane.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    font-size: 18px;
+}
+nav .logo{
+    font-size: 20px;
+}
+.menu-button{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: black;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+.new p{
+    color: black;
+
+}
+/*-----------planes starts ------------- */
+#services-section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    margin: 60px auto;
+}
+#services-section .services{
+   width: 45%;
+   text-align: left;
+}
+#services-section .services img{
+    width: 100%;
+    height: auto;
+    max-width: 600px; 
+    border-radius: 10px;
+
+} 
+#services-section .services .content{
+    margin-top: 16px;
+    
+}
+#services-section .service .content h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+}
+#services-section .service .content p{
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/*-----------planes ends ------------- */
+
+ /*-----------foooter------------- */
+   footer{
+    background-color: #222;
+    color: #eee;
+    padding: 40px 20px;
+    margin-top: 0%;
+
+}
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0;
+}
+.footer-colum{
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+.footer-colum h3{
+    margin-bottom: 15px;
+    color: #6cf;
+}
+.footer-colum p{
+    margin: 8px 0;
+    color: #66ccff;
+}
+footer a {
+    color: #66ccff;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+/*----------- foooter ends ------------- */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#jet-header{
+    min-height: 400;
+    background-image: url(images/Dassault.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    height: 400px;
+    
+    
+}
+#plane-header{
+    min-height: 400;
+    background-image: url(images/ac-130\ g.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+#bombers-header{
+    min-height: 400;
+    background-image: url(images/B-21.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    height: 600px;
+    
+    
+}
+#helicopter-header{
+    min-height: 400px;
+    background-image: url(images/aibus\ h160.png);
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+#about-header{
+    min-height: 300px;
+    background-image: url(images/f-22.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+
+.about-us{
+    display: flex;
+    justify-content: center;
+    margin: 70px auto;
+}
+.about-us .about{
+    max-width: 500px;
+    line-height: 20px;
+    font-size: 19px;
+    text-align: center;
+    height: 100vh;
+}
+.about-us .about h1{
+    margin: 0 auto;
+    text-align: center;
+}
+#contact-header{
+    min-height: 300px;
+    background-image: url(images/plane.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+    
+
+
+/* ---------Footer ends--------- */
+@media screen and (max-width:520px) {
+    #services .service {
+        width: 100%;
+    }
+      #services .service img {
+        min-width: 100%;
+        max-height: auto;
+    }
+    #services .service {
+        flex-direction: column-reverse;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        
+    }
+    /* ----------- planes starts---------- */
+      #services-section .services {
+        flex-direction: column-reverse;
+        text-align: center;
+       
+    }
+    #services-section .services img
+    #services-section .services .content{
+        width: 100%;
+        height: 200%;
+    }
+    #services-section .services .content{
+        padding: 0 16px;;
+    }
+     /* ----------- planes starts ends---------- */
+    #header{
+        min-height: 50vh;
+    }
+    .menu-button{
+        display: block;
+    }
+    nav{
+        padding: 16px;
+    }
+
+    nav ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: blue;
+        width: 80%;
+        height: 100%;
+        align-items: end;
+        padding-top: 60px;
+        margin-right: -900px;
+        transform: all .3s ease;
+    }
+    nav ul.active{
+        margin-right: 0;
+
+    }
+    nav ul li{
+        border-bottom: 1px soild ;
+        width: 100%;
+        padding: 8px 16px;
+        text-align: right;
+    }
+    
+}
