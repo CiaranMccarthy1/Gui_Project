@@ -8,9 +8,16 @@ app = Flask(__name__)
 app.secret_key = "Gui_project"
 
 FOOD_MENU = [
-    {"id": 1, "name": "Burger", "price": 5.99},
-    {"id": 2, "name": "Pizza", "price": 8.99},
-    {"id": 3, "name": "Coke", "price": 4.49}
+    {"id": 1, "name": "Burger 🍔", "price": 5.99},
+    {"id": 2, "name": "Pizza 🍕", "price": 8.99},
+    {"id": 3, "name": "Coke 🥤", "price": 4.49},
+    {"id": 4, "name": "Fries 🍟", "price": 3.99},
+    {"id": 5, "name": "Hot-dog 🌭", "price": 5.99},
+    {"id": 6, "name": "Tacos 🌮", "price": 4.99},
+    {"id": 7, "name": "Ice-cream 🍦", "price": 2.99},
+    {"id": 8, "name": "Milk 🥛", "price": 1.99},
+    {"id": 10, "name": "Salad 🥗", "price": 5.99},
+
 ]
 
 BASKETS_DIR = "baskets"
@@ -67,5 +74,22 @@ def logout():
     session.pop("username", None)
     return redirect("/login")
 
+@app.route("/remove", methods=["POST"])
+def remove():
+    if "username" not in session:
+        return redirect("/")
+    
+    index = int (request.form["index"])
+    basketPath = os.path.join(BASKETS_DIR, f"{session["username"]}.txt")
+
+    if os.path.exists(basketPath):
+        with open(basketPath) as f:
+            lines = f.readlines()
+        if 0 <= index < len(lines):
+            del lines[index]
+            with open(basketPath, "w") as f:
+                f.writelines(lines)
+    return redirect("/basket")
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug="True")
