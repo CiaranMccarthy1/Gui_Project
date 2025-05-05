@@ -18,7 +18,7 @@
             <div class="card mb-4 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.name }}</h5>
-                    <p class="card-text">Price: ${{ item.price }}</p>
+                    <p class="card-text">Price: €{{ item.price }}</p>
                     {% if username %}
                     <!--Form that allows user to add food to basket-->
                     <form action="/order" method="post">
