@@ -1,14 +1,14 @@
-
-<!--Basic nav bar that is called at the top of each page-->
+<!-- Basic nav bar that is called at the top of each page -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-  <div class="container">
+  <div class="container d-flex justify-content-between align-items-center">
     <a class="navbar-brand" href="/">🍴 FoodApp</a>
-    <div class="navbar-nav">
-      <a class="nav-link" href="/">Menu</a>
-      <a class="nav-link" href="/basket">Basket <span id="basket-count" class="badge bg-primary"></span></a>
-      {% if username %} <!-- Only displays if user is logged in-->
-        <form action = "/logout" method="get" class="d-inline-block">
-          <button class="btn btn-danger btn-sm ms-2">Logout</button>
+    <div class="navbar-nav d-flex flex-row align-items-center">
+      <a class="nav-link me-3" href="/">Menu</a>
+      <a class="nav-link me-3" href="/basket">Basket <span id="basket-count" class="badge bg-primary"></span></a>
+      <a class="nav-link me-3" href="/about">About</a>
+      {% if username %} <!-- Only displays if user is logged in -->
+        <form action="/logout" method="get" class="d-inline-block">
+          <button class="btn btn-danger btn-sm">Logout</button>
         </form>
       {% endif %}
     </div>
