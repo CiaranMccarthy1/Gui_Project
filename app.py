@@ -12,15 +12,17 @@ app.secret_key = "Gui_project"
 # Dictionary to store menu items
 FOOD_MENU = [
     {"id": 1, "name": "Burger 🍔", "price": 5.99},
-    {"id": 2, "name": "Pizza 🍕", "price": 8.99},
-    {"id": 3, "name": "Coke 🥤", "price": 4.49},
+    {"id": 2, "name": "12' Pizza 🍕", "price": 11.99},
+    {"id": 3, "name": "Hot-dog 🌭", "price": 5.99},
     {"id": 4, "name": "Fries 🍟", "price": 3.99},
-    {"id": 5, "name": "Hot-dog 🌭", "price": 5.99},
-    {"id": 6, "name": "Tacos 🌮", "price": 4.99},
-    {"id": 7, "name": "Ice-cream 🍦", "price": 2.99},
-    {"id": 8, "name": "Milk 🥛", "price": 1.99},
-    {"id": 10, "name": "Salad 🥗", "price": 5.99},
-
+    {"id": 5, "name": "Pasta 🍝", "price": 9.99},
+    {"id": 6, "name": "Salad 🥗", "price": 5.99},
+    {"id": 7, "name": "Tacos 🌮", "price": 4.99},
+    {"id": 8, "name": "Ramen 🍜", "price": 11.99},
+    {"id": 9, "name": "Sushi 🍣", "price": 5.99},
+    {"id": 10, "name": "Ice-cream 🍦", "price": 2.99},
+    {"id": 11, "name": "Coke 🥤", "price": 2.99},
+    {"id": 12, "name": "Milk 🥛", "price": 1.99},
 ]
 
 
@@ -133,4 +135,4 @@ def about():
 runs app
 '''
 if __name__ == "__main__":
-    app.run(debug="True")
+    app.run()
