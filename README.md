@@ -22,7 +22,6 @@ Django (Python)
 
 ## Team
 Ciaran McCarthy
-Kevin Mongey
 Dara Maolain
 Richard McGrath
 
