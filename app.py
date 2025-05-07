@@ -1,4 +1,10 @@
-# .venv\Scripts\activate
+'''
+---- How to run ----
+.venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+
+'''
 
 # This file was all done by Ciaran
 
