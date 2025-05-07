@@ -136,3 +136,11 @@ runs app
 '''
 if __name__ == "__main__":
     app.run()
+
+'''
+Reference 
+
+https://www.geeksforgeeks.org/flask-tutorial/
+https://flask.palletsprojects.com/en/stable/#user-s-guide
+https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+'''
