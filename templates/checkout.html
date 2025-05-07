@@ -19,6 +19,25 @@
         <label for="address" class="form-label">Enter delivery address:</label>
         <input type="text" id="address" class="form-control" placeholder="123 Shop Street" required>
       </div>
+
+      <div class="mb-3">
+        <label for="eircode" class="form-label">Eircode:</label>
+        <input type="text" id="eirode" class="form-control" placeholder="D07F473" required pattern="[A-z0-9]{7}">
+      </div>
+
+      <div class="mb-3">
+        <label for="payment" class="form-label">Payment method:</label>
+        <select id="payment" class="form-select" required>
+          <option value="">Choose a payment method</option>
+          <option value="">Credit/Debit card</option>
+          <option value="">Google pay</option>
+          <option value="">Apple pay</option>
+          <option value="">PayPal</option>
+          <option value="">Cash on delivery</option>
+        </select>
+      </div>
+
+
       <div class="d-flex justify-content-between">
         <button type="submit" class="btn btn-success">Confirm and Checkout</button>
         <a href="/" class="btn btn-primary">Back to Menu</a>
