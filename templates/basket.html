@@ -32,7 +32,11 @@
         </li>
     </ul>
     <div class="d-flex justify-content-center column-gap-3">
-        <a href="/checkout" class="btn btn-success">Checkout</a>
+        {% if basket %}
+            <a href="/checkout" class="btn btn-success">Checkout</a>
+        {% else %}
+            <button class="btn btn-secondary" disabled>Checkout</button>
+        {% endif %}
         <a href="/" class="btn btn-primary">Back to Menu</a>
     </div>
 
